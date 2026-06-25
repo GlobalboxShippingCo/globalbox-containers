@@ -25,10 +25,10 @@ export default function Home() {
  <Image
   src="/images/logo.png"
   alt="Globalbox Containers"
-  width={250}
-  height={80}
+  width={300}
+  height={100}
   style={{
-    height: "60px",
+    height: "75px",
     width: "auto",
   }}
 />
@@ -43,16 +43,19 @@ export default function Home() {
 
       {/* HERO */}
      <section style={{
-  background: "linear-gradient(to right, #111, #333)",
   color: "white",
-  padding: "80px 20px",
-  textAlign: "center"
+  padding: "220px 20px",
+  textAlign: "center",
+  backgroundImage: "linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/images/hero-container.jpg')",
+  backgroundSize: "cover",
+  backgroundPosition: "top center",
+  backgroundRepeat: "no-repeat",
 }}>
-  <h1 style={{ fontSize: "52px", marginBottom: "10px" }}>
+  <h1 style={{ fontSize: "64px", fontWeight: "bold", marginBottom: "20px" }}>
   Premium Shipping Containers Across the World
 </h1>
 
-<p style={{ fontSize: "18px", color: "#ddd", maxWidth: "700px", margin: "0 auto" }}>
+<p style={{ fontSize: "24px", color: "#ddd", maxWidth: "700px", margin: "0 auto" }}>
   Buy New & Used Containers at Competitive Prices Worldwide.
 </p>
 
@@ -72,6 +75,49 @@ export default function Home() {
 >
   Chat on WhatsApp
 </a>
+</section>
+
+{/* TRUST SECTION */}
+<section
+  style={{
+    padding: "50px 20px",
+    background: "#f8fafc",
+  }}
+>
+  <div
+    style={{
+      maxWidth: "1100px",
+      margin: "0 auto",
+      display: "grid",
+      gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+      gap: "20px",
+      textAlign: "center",
+    }}
+  >
+    <div className="service-card">
+      🌍
+      <h3>Worldwide Delivery</h3>
+      <p>Fast and reliable container delivery worldwide.</p>
+    </div>
+
+    <div className="service-card">
+      🔒
+      <h3>Secure Payments</h3>
+      <p>Safe and trusted payment methods for every order.</p>
+    </div>
+
+    <div className="service-card">
+      📦
+      <h3>Premium Containers</h3>
+      <p>High-quality new and used containers at great prices.</p>
+    </div>
+
+    <div className="service-card">
+      💬
+      <h3>24/7 Support</h3>
+      <p>Our team is always available to assist customers.</p>
+    </div>
+  </div>
 </section>
 
    {/* SERVICES */}
