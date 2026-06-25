@@ -22,8 +22,16 @@ export default function Home() {
   zIndex: 1000,
   borderBottom: "1px solid #eee"
 }}>
-  <h2>Globalbox</h2>
-
+ <Image
+  src="/images/logo.png"
+  alt="Globalbox Containers"
+  width={250}
+  height={80}
+  style={{
+    height: "60px",
+    width: "auto",
+  }}
+/>
   <div style={{ display: "flex", gap: "20px" }}>
     <a href="/">Home</a>
     <a href="/gallery">Gallery</a>

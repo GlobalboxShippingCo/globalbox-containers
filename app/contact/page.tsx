@@ -77,6 +77,29 @@ export default function ContactPage() {
       <p>
         📧 conglobalshippingcompanies@gmail.com
       </p>
+      <p style={{ marginTop: "40px" }}>
+  📞 +1 860-689-7427
+</p>
+
+<p>
+  📧 conglobalshippingcompanies@gmail.com 
+</p>
+
+<h2 style={{ marginTop: "40px" }}>
+  Service Area
+</h2>
+
+<iframe
+  src="https://www.google.com/maps?q=United+States&output=embed"
+  width="100%"
+  height="450"
+  style={{
+    border: 0,
+    borderRadius: "10px",
+    marginTop: "20px",
+  }}
+  loading="lazy"
+></iframe>
     </div>
   );
 }
