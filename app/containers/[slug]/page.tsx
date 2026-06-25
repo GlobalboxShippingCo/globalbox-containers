@@ -1,4 +1,5 @@
 import Image from "next/image";
+import QuoteForm from "@/app/components/QuoteForm";
 type Props = {
   params: Promise<{
     slug: string;
@@ -218,7 +219,8 @@ We provide fast and reliable container delivery across the United States and int
     </a>
   </div>
 </div>
-{/* REQUEST QUOTE */}
+
+ {/* REQUEST QUOTE */}
 <div
   style={{
     marginTop: "60px",
@@ -229,56 +231,7 @@ We provide fast and reliable container delivery across the United States and int
 >
   <h2>Request a Quote</h2>
 
-  <input
-    type="text"
-    placeholder="Your Name"
-    style={{
-      width: "100%",
-      padding: "15px",
-      marginTop: "15px",
-      borderRadius: "8px",
-      border: "1px solid #ddd",
-    }}
-  />
-
-  <input
-    type="email"
-    placeholder="Your Email"
-    style={{
-      width: "100%",
-      padding: "15px",
-      marginTop: "15px",
-      borderRadius: "8px",
-      border: "1px solid #ddd",
-    }}
-  />
-
-  <textarea
-    placeholder="Message"
-    rows={5}
-    style={{
-      width: "100%",
-      padding: "15px",
-      marginTop: "15px",
-      borderRadius: "8px",
-      border: "1px solid #ddd",
-    }}
-  />
-
-  <button
-    style={{
-      marginTop: "20px",
-      padding: "15px 25px",
-      background: "#0f172a",
-      color: "white",
-      border: "none",
-      borderRadius: "8px",
-      fontWeight: "bold",
-      cursor: "pointer",
-    }}
-  >
-    Send Request
-  </button>
+  <QuoteForm />
 </div>
     </div>
   );
