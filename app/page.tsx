@@ -553,30 +553,6 @@ export default function Home() {
   </div>
 </section>
 
-{/* TRUST BADGES */}
-<section
-  style={{
-    padding: "40px 20px",
-    textAlign: "center",
-  }}
->
-  <h2>Why Customers Trust Us</h2>
-
-  <div
-    style={{
-      display: "flex",
-      justifyContent: "center",
-      gap: "30px",
-      flexWrap: "wrap",
-      marginTop: "20px",
-    }}
-  >
-    <div>✅ Secure Payments</div>
-    <div>🚚 Fast Delivery</div>
-    <div>🏆 Premium Quality</div>
-    <div>📞 24/7 Support</div>
-  </div>
-</section>
 
        {/* CONTACT SECTION */}
 <section style={{
