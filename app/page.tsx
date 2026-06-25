@@ -1,65 +1,686 @@
 import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+   <main style={{
+  fontFamily: "Arial",
+  background: "#f7f8fa",
+  minHeight: "100vh",
+  padding: "0",
+  margin: "0",
+}}>
+
+       {/* NAV BAR */}
+    <nav style={{
+  display: "flex",
+  justifyContent: "space-between",
+  padding: "20px",
+  flexWrap: "wrap",
+  gap: "10px",
+  background: "white",
+  position: "sticky",
+  top: "0",
+  zIndex: 1000,
+  borderBottom: "1px solid #eee"
+}}>
+  <h2>Globalbox</h2>
+
+  <div style={{ display: "flex", gap: "20px" }}>
+    <a href="/">Home</a>
+    <a href="/gallery">Gallery</a>
+    <a href="/about">About</a>
+    <a href="/services">Services</a>
+    <a href="/contact">Contact</a>
+  </div>
+</nav>
+
+      {/* HERO */}
+     <section style={{
+  background: "linear-gradient(to right, #111, #333)",
+  color: "white",
+  padding: "80px 20px",
+  textAlign: "center"
+}}>
+  <h1 style={{ fontSize: "52px", marginBottom: "10px" }}>
+    Globalbox Containers
+  </h1>
+
+  <p style={{ fontSize: "18px", color: "#ddd", maxWidth: "600px", margin: "0 auto" }}>
+    We provide durable, secure, and affordable shipping container solutions for businesses and personal use.
+  </p>
+
+   <a
+  href="https://wa.me/18606897427"
+  target="_blank"
+  style={{
+    marginTop: "25px",
+    padding: "14px 28px",
+    background: "#25D366",
+    color: "white",
+    textDecoration: "none",
+    borderRadius: "8px",
+    display: "inline-block",
+    fontWeight: "bold",
+  }}
+>
+  Chat on WhatsApp
+</a>
+</section>
+
+   {/* SERVICES */}
+<section style={{
+  padding: "40px 15px",
+  maxWidth: "1100px",
+  margin: "0 auto"
+}}>
+  <h2 style={{ fontSize: "32px", marginBottom: "20px" }}>
+    Our Services
+  </h2>
+
+  <div style={{
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+    gap: "20px"
+  }}>
+
+    <div className="service-card">
+      🚢 <h3>Container Sales</h3>
+      <p>High-quality shipping containers for all business needs.</p>
     </div>
+
+    <div className="service-card">
+      📦 <h3>Storage Solutions</h3>
+      <p>Secure and affordable storage containers.</p>
+    </div>
+
+    <div className="service-card">
+      🔧 <h3>Modifications</h3>
+      <p>Custom container designs tailored to your needs.</p>
+    </div>
+
+    <div className="service-card">
+      🚚 <h3>Delivery Services</h3>
+      <p>Fast and reliable delivery to your location.</p>
+    </div>
+
+  </div>
+</section>
+
+      {/* ABOUT US */}
+<section
+  style={{
+    padding: "60px 20px",
+    maxWidth: "1000px",
+    margin: "0 auto",
+  }}
+>
+  <h2
+    style={{
+      fontSize: "32px",
+      marginBottom: "20px",
+      textAlign: "center",
+    }}
+  >
+    About Globalbox Containers
+  </h2>
+
+  <p
+    style={{
+      fontSize: "18px",
+      lineHeight: "1.8",
+      textAlign: "center",
+      color: "#555",
+      maxWidth: "800px",
+      margin: "0 auto",
+    }}
+  >
+    Globalbox Containers provides reliable shipping containers for storage,
+    logistics, and custom business solutions. We are committed to delivering
+    durable, secure, and affordable containers with excellent customer service.
+  </p>
+</section>
+
+     {/* FEATURED CONTAINERS */}
+<section
+  style={{
+    padding: "60px 20px",
+    maxWidth: "1100px",
+    margin: "0 auto",
+  }}
+>
+  <h2
+    style={{
+      fontSize: "32px",
+      marginBottom: "30px",
+      textAlign: "center",
+    }}
+  >
+    Featured Containers
+  </h2>
+
+  <div
+    style={{
+      display: "grid",
+      gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+      gap: "20px",
+    }}
+  >
+   {/* 20ft Container */}
+<div className="service-card">
+
+  <div
+    style={{
+      background: "#ef4444",
+      color: "white",
+      padding: "6px 12px",
+      borderRadius: "20px",
+      display: "inline-block",
+      fontSize: "12px",
+      fontWeight: "bold",
+      marginBottom: "15px",
+    }}
+  >
+    NEW
+  </div>
+
+  <Image
+    src="/images/container1.jpg"
+    alt="20ft Standard Container"
+    width={400}
+    height={250}
+    style={{
+      width: "100%",
+      height: "220px",
+      objectFit: "cover",
+      borderRadius: "10px",
+    }}
+  />
+
+  <h3 style={{ marginTop: "15px" }}>
+    20ft Standard Container
+  </h3>
+
+  <p>Strong and secure for storage and transport.</p>
+
+  <h4>$2,500</h4>
+
+  <a
+    href="https://wa.me/18606897427?text=Hello,%20I'm%20interested%20in%20the%2020ft%20Standard%20Container."
+    target="_blank"
+    style={{
+      display: "inline-block",
+      marginTop: "15px",
+      padding: "12px 20px",
+      background: "#25D366",
+      color: "white",
+      textDecoration: "none",
+      borderRadius: "8px",
+      fontWeight: "bold",
+      width: "100%",
+      textAlign: "center",
+    }}
+  >
+    Get Quote on WhatsApp
+  </a>
+
+  <a
+  href="/containers/20ft-standard-container"
+  style={{
+    display: "block",
+    marginTop: "10px",
+    padding: "12px 20px",
+    border: "1px solid #0f172a",
+    background: "white",
+    borderRadius: "8px",
+    textAlign: "center",
+    textDecoration: "none",
+    color: "#0f172a",
+    fontWeight: "bold",
+  }}
+>
+  View Details
+</a>
+
+</div>
+
+    {/* 40ft Container */}
+<div className="service-card">
+  
+  <div
+    style={{
+      background: "#ef4444",
+      color: "white",
+      padding: "6px 12px",
+      borderRadius: "20px",
+      display: "inline-block",
+      fontSize: "12px",
+      fontWeight: "bold",
+      marginBottom: "15px",
+    }}
+  >
+    NEW
+  </div>
+
+  <Image
+    src="/images/container2.jpg"
+    alt="40ft Standard Container"
+    width={400}
+    height={250}
+    style={{
+      width: "100%",
+      height: "220px",
+      objectFit: "cover",
+      borderRadius: "10px",
+    }}
+  />
+
+  <h3 style={{ marginTop: "15px" }}>
+    40ft Standard Container
+  </h3>
+
+  <p>Ideal for commercial and industrial use.</p>
+
+  <h4>$4,000</h4>
+
+  <a
+    href="https://wa.me/18606897427?text=Hello,%20I'm%20interested%20in%20the%2040ft%20Standard%20Container."
+    target="_blank"
+    style={{
+      display: "inline-block",
+      marginTop: "15px",
+      padding: "12px 20px",
+      background: "#25D366",
+      color: "white",
+      textDecoration: "none",
+      borderRadius: "8px",
+      fontWeight: "bold",
+    }}
+  >
+    Get Quote on WhatsApp
+  </a>
+  <a
+  href="/containers/40ft-standard-container"
+  style={{
+    display: "block",
+    marginTop: "10px",
+    padding: "12px 20px",
+    border: "1px solid #0f172a",
+    background: "white",
+    borderRadius: "8px",
+    textAlign: "center",
+    textDecoration: "none",
+    color: "#0f172a",
+    fontWeight: "bold",
+  }}
+>
+  View Details
+</a>
+</div>
+
+    {/* High Cube Container */}
+<div className="service-card">
+
+  <div
+    style={{
+      background: "#ef4444",
+      color: "white",
+      padding: "6px 12px",
+      borderRadius: "20px",
+      display: "inline-block",
+      fontSize: "12px",
+      fontWeight: "bold",
+      marginBottom: "15px",
+    }}
+  >
+    NEW
+  </div>
+
+  <Image
+    src="/images/container3.jpg"
+    alt="40ft High Cube Container"
+    width={400}
+    height={250}
+    style={{
+      width: "100%",
+      height: "220px",
+      objectFit: "cover",
+      borderRadius: "10px",
+    }}
+  />
+
+  <h3 style={{ marginTop: "15px" }}>
+    40ft High Cube Container
+  </h3>
+
+  <p>Extra height and larger storage capacity.</p>
+
+  <h4>$4,800</h4>
+
+  <a
+    href="https://wa.me/18606897427?text=Hello,%20I'm%20interested%20in%20the%2040ft%20High%20Cube%20Container."
+    target="_blank"
+    style={{
+      display: "inline-block",
+      marginTop: "15px",
+      padding: "12px 20px",
+      background: "#25D366",
+      color: "white",
+      textDecoration: "none",
+      borderRadius: "8px",
+      fontWeight: "bold",
+    }}
+  >
+    Get Quote on WhatsApp
+  </a>
+
+<a
+  href="/containers/40ft-high-cube-container"
+  style={{
+    display: "block",
+    marginTop: "10px",
+    padding: "12px 20px",
+    border: "1px solid #0f172a",
+    background: "white",
+    borderRadius: "8px",
+    textAlign: "center",
+    textDecoration: "none",
+    color: "#0f172a",
+    fontWeight: "bold",
+  }}
+>
+  View Details
+</a>
+</div>
+</div>
+</section>
+
+      {/* TESTIMONIALS */}
+<section
+  style={{
+    padding: "60px 20px",
+    maxWidth: "1000px",
+    margin: "0 auto"
+  }}
+>
+  <h2
+    style={{
+      fontSize: "32px",
+      textAlign: "center",
+      marginBottom: "30px"
+    }}
+  >
+    What Our Customers Say
+  </h2>
+
+  <div
+    style={{
+      display: "grid",
+      gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+      gap: "20px"
+    }}
+  >
+    <div className="service-card">
+      <p>
+        "Excellent service and fast delivery. Highly recommended."
+      </p>
+      <h4>- Michael A.</h4>
+    </div>
+
+    <div className="service-card">
+      <p>
+        "Their containers are strong and affordable."
+      </p>
+      <h4>- Sarah K.</h4>
+    </div>
+
+    <div className="service-card">
+      <p>
+        "Professional team and smooth delivery process."
+      </p>
+      <h4>- David O.</h4>
+    </div>
+  </div>
+</section>
+
+      {/* FAQ SECTION */}
+<section
+  style={{
+    padding: "60px 20px",
+    maxWidth: "1000px",
+    margin: "0 auto"
+  }}
+>
+  <h2
+    style={{
+      fontSize: "32px",
+      textAlign: "center",
+      marginBottom: "30px"
+    }}
+  >
+    Frequently Asked Questions
+  </h2>
+
+  <div className="service-card">
+    <h3>Do you deliver nationwide?</h3>
+    <p>Yes, we provide container delivery services across worldwide.</p>
+  </div>
+
+  <div className="service-card">
+    <h3>Do you sell both 20ft and 40ft containers?</h3>
+    <p>Yes, we offer 20ft, 40ft, and High Cube containers.</p>
+  </div>
+
+  <div className="service-card">
+    <h3>Can containers be modified?</h3>
+    <p>Yes, we provide custom modifications for offices, storage, and other uses.</p>
+  </div>
+</section>
+
+      {/* WHY CHOOSE US */}
+<section
+  style={{
+    padding: "60px 20px",
+    maxWidth: "1100px",
+    margin: "0 auto",
+    textAlign: "center",
+  }}
+>
+  <h2
+    style={{
+      fontSize: "32px",
+      marginBottom: "40px",
+    }}
+  >
+    Why Choose Globalbox Containers?
+  </h2>
+
+  <div
+    style={{
+      display: "grid",
+      gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+      gap: "20px",
+    }}
+  >
+    <div className="service-card">
+      <h3>🏆 Premium Quality</h3>
+      <p>Strong and durable containers for every need.</p>
+    </div>
+
+    <div className="service-card">
+      <h3>🚚 Fast Delivery</h3>
+      <p>Reliable nationwide delivery services.</p>
+    </div>
+
+    <div className="service-card">
+      <h3>💰 Affordable Pricing</h3>
+      <p>Competitive prices with excellent value.</p>
+    </div>
+
+    <div className="service-card">
+      <h3>⭐ Trusted Service</h3>
+      <p>Customer satisfaction is our top priority.</p>
+    </div>
+  </div>
+</section>
+
+{/* PAYMENT METHODS */}
+<section
+  style={{
+    padding: "60px 20px",
+    maxWidth: "1000px",
+    margin: "0 auto",
+    textAlign: "center",
+  }}
+>
+  <h2 style={{ fontSize: "32px", marginBottom: "30px" }}>
+    Accepted Payment Methods
+  </h2>
+
+  <div
+    style={{
+      display: "flex",
+      justifyContent: "center",
+      gap: "30px",
+      flexWrap: "wrap",
+      fontSize: "20px",
+    }}
+  >
+    <div>💳 Visa</div>
+    <div>💳 Mastercard</div>
+    <div>💳 American Express</div>
+    <div>📱 PayPal</div>
+    <div>💵 Cash App</div>
+    <div>🏦 Bank Transfer</div>
+  </div>
+</section>
+
+{/* TRUST BADGES */}
+<section
+  style={{
+    padding: "40px 20px",
+    textAlign: "center",
+  }}
+>
+  <h2>Why Customers Trust Us</h2>
+
+  <div
+    style={{
+      display: "flex",
+      justifyContent: "center",
+      gap: "30px",
+      flexWrap: "wrap",
+      marginTop: "20px",
+    }}
+  >
+    <div>✅ Secure Payments</div>
+    <div>🚚 Fast Delivery</div>
+    <div>🏆 Premium Quality</div>
+    <div>📞 24/7 Support</div>
+  </div>
+</section>
+
+       {/* CONTACT SECTION */}
+<section style={{
+  padding: "60px 40px",
+  maxWidth: "800px",
+  margin: "0 auto"
+}}>
+  <h2 style={{ fontSize: "32px", marginBottom: "20px" }}>
+    Contact Us
+  </h2>
+
+  <p>Get in touch for pricing and container solutions.</p>
+
+  <form style={{
+    display: "flex",
+    flexDirection: "column",
+    gap: "10px",
+    marginTop: "20px"
+  }}>
+
+    <input
+      type="text"
+      placeholder="Your Name"
+      style={{ padding: "10px", border: "1px solid #ccc" }}
+    />
+
+    <input
+      type="email"
+      placeholder="Your Email"
+      style={{ padding: "10px", border: "1px solid #ccc" }}
+    />
+
+    <textarea
+      placeholder="Your Message"
+      rows={4}
+      style={{ padding: "10px", border: "1px solid #ccc" }}
+    />
+
+    <button style={{
+      padding: "12px",
+      background: "black",
+      color: "white",
+      border: "none",
+      cursor: "pointer"
+    }}>
+      Send Message
+    </button>
+
+  </form>
+</section>
+
+     {/* FOOTER */}
+<footer
+  style={{
+    background: "#111",
+    color: "white",
+    padding: "40px 20px",
+    marginTop: "60px",
+    textAlign: "center",
+  }}
+>
+  <h2>Globalbox Containers</h2>
+
+  <p style={{ marginTop: "15px" }}>
+    Reliable Shipping Containers | Storage Solutions | Fast Delivery
+  </p>
+
+  <p style={{ marginTop: "10px" }}>
+    📍 Orlando, Florida
+  </p>
+
+  <p>
+    📞 +1 860 689 7427 
+  </p>
+
+  <p>
+    📧 conglobalshippingcompanies@gmail.com
+  </p>
+
+  <div style={{ marginTop: "20px" }}>
+    <a
+      href="https://wa.me/18606897427"
+      target="_blank"
+      style={{
+        color: "#25D366",
+        textDecoration: "none",
+        fontWeight: "bold",
+      }}
+    >
+      Chat With Us on WhatsApp
+    </a>
+  </div>
+
+  <p
+    style={{
+      marginTop: "30px",
+      color: "#aaa",
+      fontSize: "14px",
+    }}
+  >
+    © 2026 Globalbox Containers. All Rights Reserved.
+  </p>
+</footer>
+
+    </main>
   );
 }
