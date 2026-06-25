@@ -147,6 +147,48 @@ export default function Home() {
   </p>
 </section>
 
+<section
+  style={{
+    textAlign: "center",
+    padding: "80px 20px",
+  }}
+>
+  <h1
+    style={{
+      fontSize: "48px",
+      marginBottom: "20px",
+    }}
+  >
+    Premium Shipping Containers Across the World
+  </h1>
+
+  <p
+    style={{
+      fontSize: "22px",
+      marginBottom: "30px",
+      color: "#555",
+    }}
+  >
+    Buy New & Used Containers at Competitive Prices Worldwide
+  </p>
+
+  <a
+    href="https://wa.me/18606897427"
+    target="_blank"
+    style={{
+      display: "inline-block",
+      padding: "15px 30px",
+      background: "#25D366",
+      color: "white",
+      textDecoration: "none",
+      borderRadius: "8px",
+      fontWeight: "bold",
+    }}
+  >
+    Get a Free Quote
+  </a>
+</section>
+
      {/* FEATURED CONTAINERS */}
 <section
   style={{
