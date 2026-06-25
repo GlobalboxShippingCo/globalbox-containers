@@ -49,12 +49,12 @@ export default function Home() {
   textAlign: "center"
 }}>
   <h1 style={{ fontSize: "52px", marginBottom: "10px" }}>
-    Globalbox Containers
-  </h1>
+  Premium Shipping Containers Across the World
+</h1>
 
-  <p style={{ fontSize: "18px", color: "#ddd", maxWidth: "600px", margin: "0 auto" }}>
-    We provide durable, secure, and affordable shipping container solutions for businesses and personal use.
-  </p>
+<p style={{ fontSize: "18px", color: "#ddd", maxWidth: "700px", margin: "0 auto" }}>
+  Buy New & Used Containers at Competitive Prices Worldwide.
+</p>
 
    <a
   href="https://wa.me/18606897427"
@@ -145,48 +145,6 @@ export default function Home() {
     logistics, and custom business solutions. We are committed to delivering
     durable, secure, and affordable containers with excellent customer service.
   </p>
-</section>
-
-<section
-  style={{
-    textAlign: "center",
-    padding: "80px 20px",
-  }}
->
-  <h1
-    style={{
-      fontSize: "48px",
-      marginBottom: "20px",
-    }}
-  >
-    Premium Shipping Containers Across the World
-  </h1>
-
-  <p
-    style={{
-      fontSize: "22px",
-      marginBottom: "30px",
-      color: "#555",
-    }}
-  >
-    Buy New & Used Containers at Competitive Prices Worldwide
-  </p>
-
-  <a
-    href="https://wa.me/18606897427"
-    target="_blank"
-    style={{
-      display: "inline-block",
-      padding: "15px 30px",
-      background: "#25D366",
-      color: "white",
-      textDecoration: "none",
-      borderRadius: "8px",
-      fontWeight: "bold",
-    }}
-  >
-    Get a Free Quote
-  </a>
 </section>
 
      {/* FEATURED CONTAINERS */}
