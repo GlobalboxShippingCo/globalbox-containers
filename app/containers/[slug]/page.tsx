@@ -122,6 +122,27 @@ const container =
   ✅ Available for Delivery
 </div>
 
+<h2 style={{ marginTop: "40px" }}>Container Features</h2>
+
+<ul
+  style={{
+    lineHeight: "2",
+    fontSize: "18px",
+  }}
+>
+  <li>✔ Wind and Watertight</li>
+  <li>✔ Heavy-Duty Corten Steel Construction</li>
+  <li>✔ Secure Locking Cargo Doors</li>
+  <li>✔ Forklift Pockets for Easy Handling</li>
+  <li>✔ Suitable for Storage & Shipping</li>
+  <li>✔ Long Service Life</li>
+</ul>
+<h2>Worldwide Delivery</h2>
+
+<p style={{ fontSize: "18px", lineHeight: "1.8" }}>
+We provide fast and reliable container delivery across the United States and international locations. Delivery schedules vary by location.
+</p>
+
       <a
         href="https://wa.me/18606897427"
         target="_blank"
