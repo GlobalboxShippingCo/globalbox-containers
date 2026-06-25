@@ -68,7 +68,7 @@ const container =
      Starting From {container.price}
      </h2>
 
-     <div
+    <div
   style={{
     marginTop: "30px",
     padding: "20px",
@@ -79,14 +79,32 @@ const container =
 >
   <h3>Specifications</h3>
 
-  <p><strong>Condition:</strong> New / Cargo Worthy</p>
+  {slug === "20ft-standard-container" && (
+    <>
+      <p><strong>External Length:</strong> 20ft</p>
+      <p><strong>External Width:</strong> 8ft</p>
+      <p><strong>External Height:</strong> 8.6ft</p>
+    </>
+  )}
+
+  {slug === "40ft-standard-container" && (
+    <>
+      <p><strong>External Length:</strong> 40ft</p>
+      <p><strong>External Width:</strong> 8ft</p>
+      <p><strong>External Height:</strong> 8.6ft</p>
+    </>
+  )}
+
+  {slug === "40ft-high-cube-container" && (
+    <>
+      <p><strong>External Length:</strong> 40ft</p>
+      <p><strong>External Width:</strong> 8ft</p>
+      <p><strong>External Height:</strong> 9.6ft</p>
+    </>
+  )}
 
   <p><strong>Material:</strong> Corten Steel</p>
-
-  <p><strong>Usage:</strong> Storage & Shipping</p>
-
-  <p><strong>Delivery:</strong> Available Nationwide</p>
-
+  <p><strong>Condition:</strong> New / Cargo Worthy</p>
   <p><strong>Weatherproof:</strong> Yes</p>
 </div>
 
