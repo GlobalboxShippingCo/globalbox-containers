@@ -1,3 +1,4 @@
+import ContactForm from "@/app/components/ContactForm";
 export default function ContactPage() {
   return (
     <div
@@ -19,87 +20,37 @@ export default function ContactPage() {
         Need a shipping container? Contact us today for a free quote.
       </p>
 
-      <input
-        type="text"
-        placeholder="Your Name"
-        style={{
-          width: "100%",
-          padding: "15px",
-          marginTop: "25px",
-          border: "1px solid #ddd",
-          borderRadius: "8px",
-        }}
-      />
+      <h2 style={{ marginTop: "40px" }}>Office Location</h2>
 
-      <input
-        type="email"
-        placeholder="Your Email"
-        style={{
-          width: "100%",
-          padding: "15px",
-          marginTop: "15px",
-          border: "1px solid #ddd",
-          borderRadius: "8px",
-        }}
-      />
+<p>📍 Orlando, Florida, USA</p>
 
-      <textarea
-        placeholder="Your Message"
-        rows={6}
-        style={{
-          width: "100%",
-          padding: "15px",
-          marginTop: "15px",
-          border: "1px solid #ddd",
-          borderRadius: "8px",
-        }}
-      />
+<p>📞 +1 (860) 689-7427</p>
 
-      <button
-        style={{
-          marginTop: "20px",
-          padding: "15px 25px",
-          background: "#0f172a",
-          color: "white",
-          border: "none",
-          borderRadius: "8px",
-          fontWeight: "bold",
-          cursor: "pointer",
-        }}
-      >
-        Send Message
-      </button>
+<p>📧 conglobalshippingcompanies@gmail.com</p>
 
-      <p style={{ marginTop: "40px" }}>
-        📞 +1 860-689-7427
-      </p>
+<p>🕒 Monday – Friday: 8:00 AM – 6:00 PM</p>
 
-      <p>
-        📧 conglobalshippingcompanies@gmail.com
-      </p>
-      <p style={{ marginTop: "40px" }}>
-  📞 +1 860-689-7427
-</p>
+<p>🕒 Saturday: 9:00 AM – 2:00 PM</p>
 
-<p>
-  📧 conglobalshippingcompanies@gmail.com 
-</p>
+<p>🕒 Sunday: Closed</p>
 
-<h2 style={{ marginTop: "40px" }}>
-  Service Area
-</h2>
+<h2 style={{ marginTop: "40px" }}>Find Us</h2>
 
 <iframe
-  src="https://www.google.com/maps?q=United+States&output=embed"
+  src="https://www.google.com/maps?q=Orlando,Florida&output=embed"
   width="100%"
-  height="450"
+  height="350"
   style={{
     border: 0,
     borderRadius: "10px",
     marginTop: "20px",
+    marginBottom: "40px",
   }}
   loading="lazy"
-></iframe>
+/>
+
+     <ContactForm />
+
     </div>
   );
 }
