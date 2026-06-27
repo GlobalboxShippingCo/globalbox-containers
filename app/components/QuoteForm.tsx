@@ -1,15 +1,40 @@
 "use client";
 
 export default function QuoteForm() {
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     const form = e.currentTarget;
 
     const name = (form.elements.namedItem("name") as HTMLInputElement).value;
     const email = (form.elements.namedItem("email") as HTMLInputElement).value;
-    const message = (form.elements.namedItem("message") as HTMLTextAreaElement).value;
+    const message = (
+      form.elements.namedItem("message") as HTMLTextAreaElement
+    ).value;
 
+    // Send email
+const response = await fetch("/api/send-email", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify({
+    name,
+    email,
+    message,
+  }),
+});
+
+const result = await response.json();
+
+console.log(result);
+
+if (!response.ok) {
+  alert(result.error || "Email failed to send.");
+  return;
+}
+
+    // Open WhatsApp
     const whatsappMessage = `New Container Quote Request
 
 Name: ${name}
@@ -24,6 +49,10 @@ ${message}`;
       )}`,
       "_blank"
     );
+
+    form.reset();
+
+    alert("Your quote request has been sent successfully!");
   };
 
   return (
