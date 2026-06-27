@@ -462,7 +462,7 @@ export default function Home() {
       marginBottom: "30px"
     }}
   >
-    What Our Customers Say
+   Customers Feedback
   </h2>
 
   <div
@@ -472,26 +472,59 @@ export default function Home() {
       gap: "20px"
     }}
   >
-    <div className="service-card">
-      <p>
-        "Excellent service and fast delivery. Highly recommended."
-      </p>
-      <h4>- Michael A.</h4>
-    </div>
+   <div className="service-card">
+  <div
+    style={{
+      fontSize: "24px",
+      color: "#fbbf24",
+      marginBottom: "12px",
+    }}
+  >
+    ⭐⭐⭐⭐⭐
+  </div>
+
+  <p>
+    “Excellent service! Our container arrived on time and in excellent condition. Highly recommended.”
+  </p>
+
+  <h4>- Michael T., Orlando, FL</h4>
+</div>
 
     <div className="service-card">
-      <p>
-        "Their containers are strong and affordable."
-      </p>
-      <h4>- Sarah K.</h4>
-    </div>
+  <div
+    style={{
+      fontSize: "24px",
+      color: "#fbbf24",
+      marginBottom: "12px",
+    }}
+  >
+    ⭐⭐⭐⭐⭐
+  </div>
+
+  <p>
+   “The team was professional from start to finish. The ordering process was easy, and delivery was exactly when promised.”
+  </p>
+
+  <h4>- Sarah L., Jacksonville, FL</h4>
+</div>
 
     <div className="service-card">
-      <p>
-        "Professional team and smooth delivery process."
-      </p>
-      <h4>- David O.</h4>
-    </div>
+  <div
+    style={{
+      fontSize: "24px",
+      color: "#fbbf24",
+      marginBottom: "12px",
+    }}
+  >
+    ⭐⭐⭐⭐⭐
+  </div>
+
+  <p>
+   “The team was professional from start to finish. The ordering process was easy, and delivery was exactly when promised.”
+  </p>
+
+  <h4>- Sarah L., Jacksonville, FL</h4>
+</div>
   </div>
 </section>
 
