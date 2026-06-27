@@ -29,7 +29,7 @@ export default function GalleryPage() {
         {/* 20ft Container */}
         <div className="service-card">
           <Image
-            src="/images/container1.jpg"
+           src="/images/20ft/20ft-1.jpg"
             alt="20ft Standard Container"
             width={400}
             height={250}
@@ -64,7 +64,7 @@ export default function GalleryPage() {
         {/* 40ft Container */}
         <div className="service-card">
           <Image
-            src="/images/container2.jpg"
+            src="/images/40ft/40ft-1.jpg"
             alt="40ft Standard Container"
             width={400}
             height={250}
@@ -99,7 +99,7 @@ export default function GalleryPage() {
         {/* High Cube Container */}
         <div className="service-card">
           <Image
-            src="/images/container3.jpg"
+            src="/images/high-cube/high-cube-1.jpg"
             alt="40ft High Cube Container"
             width={400}
             height={250}
@@ -130,6 +130,41 @@ export default function GalleryPage() {
             View Details
           </a>
         </div>
+
+        {/* Reefer Container */}
+<div className="service-card">
+  <Image
+    src="/images/reefer/reefer-1.jpg"
+    alt="Reefer Container"
+    width={400}
+    height={250}
+    style={{
+      width: "100%",
+      height: "220px",
+      objectFit: "cover",
+      borderRadius: "10px",
+    }}
+  />
+
+  <h3>Reefer Container</h3>
+  <p>Starting from $5,500</p>
+
+  <a
+    href="/containers/reefer-container"
+    style={{
+      display: "block",
+      marginTop: "15px",
+      padding: "12px",
+      background: "#0f172a",
+      color: "white",
+      textAlign: "center",
+      textDecoration: "none",
+      borderRadius: "8px",
+    }}
+  >
+    View Details
+  </a>
+</div>
       </div>
     </div>
   );

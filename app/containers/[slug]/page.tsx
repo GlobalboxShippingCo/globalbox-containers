@@ -1,5 +1,6 @@
 import Image from "next/image";
 import QuoteForm from "@/app/components/QuoteForm";
+import ContainerGallery from "@/app/components/ContainerGallery";
 type Props = {
   params: Promise<{
     slug: string;
@@ -11,18 +12,58 @@ export default async function ContainerPage({ params }: Props) {
 
 const containerData = {
   "20ft-standard-container": {
-    image: "/images/container1.jpg",
+    image: "/images/20ft/20ft-1.jpg",
     price: "$2,500",
   },
+
   "40ft-standard-container": {
-    image: "/images/container2.jpg",
+    image: "/images/40ft/40ft-1.jpg",
     price: "$4,000",
   },
+
   "40ft-high-cube-container": {
-    image: "/images/container3.jpg",
+    image: "/images/high-cube/high-cube-1.jpg",
     price: "$4,800",
   },
+
+  "reefer-container": {
+    image: "/images/reefer/reefer-1.jpg",
+    price: "$5,500",
+  },
 };
+
+const galleryImages = {
+  "20ft-standard-container": [
+    "/images/20ft/20ft-1.jpg",
+    "/images/20ft/20ft-2.jpg",
+    "/images/20ft/20ft-3.jpg",
+    "/images/20ft/20ft-4.jpg",
+  ],
+
+  "40ft-standard-container": [
+    "/images/40ft/40ft-1.jpg",
+    "/images/40ft/40ft-2.jpg",
+    "/images/40ft/40ft-3.jpg",
+    "/images/40ft/40ft-4.jpg",
+  ],
+
+  "40ft-high-cube-container": [
+    "/images/high-cube/high-cube-1.jpg",
+    "/images/high-cube/high-cube-2.jpg",
+    "/images/high-cube/high-cube-3.jpg",
+  ],
+
+  "reefer-container": [
+    "/images/reefer/reefer-1.jpg",
+    "/images/reefer/reefer-2.jpg",
+    "/images/reefer/reefer-3.jpg",
+    "/images/reefer/reefer-4.jpg",
+  ],
+};
+
+const images =
+  galleryImages[slug as keyof typeof galleryImages] ??
+  galleryImages["20ft-standard-container"];
 
 const container =
   containerData[slug as keyof typeof containerData] ||
@@ -40,19 +81,7 @@ const container =
         {slug.replace(/-/g, " ").toUpperCase()}
       </h1>
 
-     <Image
-  src={container.image}
-  alt="Container"
-  width={900}
-  height={500}
-  style={{
-    width: "100%",
-    height: "400px",
-    objectFit: "cover",
-    borderRadius: "15px",
-    marginBottom: "30px",
-  }}
-/>
+    <ContainerGallery images={images} />
 
 <p style={{ fontSize: "18px", lineHeight: "1.8" }}>
   Premium quality shipping container available for sale. Built for
