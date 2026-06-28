@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Lightbox from "./Lightbox";
 
 type Props = {
   images: string[];
@@ -9,6 +10,7 @@ type Props = {
 
 export default function ContainerGallery({ images }: Props) {
   const [selectedImage, setSelectedImage] = useState(images[0]);
+  const [showLightbox, setShowLightbox] = useState(false);
 
   return (
     <div style={{ marginTop: "40px" }}>
@@ -18,11 +20,13 @@ export default function ContainerGallery({ images }: Props) {
         alt="Container"
         width={900}
         height={500}
+        onClick={() => setShowLightbox(true)}
         style={{
           width: "100%",
           height: "420px",
           objectFit: "cover",
           borderRadius: "12px",
+          cursor: "zoom-in",
         }}
       />
 
@@ -56,6 +60,14 @@ export default function ContainerGallery({ images }: Props) {
           />
         ))}
       </div>
+
+      {/* Full Screen Lightbox */}
+      {showLightbox && (
+        <Lightbox
+          image={selectedImage}
+          onClose={() => setShowLightbox(false)}
+        />
+      )}
     </div>
   );
 }

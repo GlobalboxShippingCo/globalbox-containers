@@ -1,6 +1,7 @@
 import Image from "next/image";
 import QuoteForm from "@/app/components/QuoteForm";
 import ContainerGallery from "@/app/components/ContainerGallery";
+import QuoteRequestForm from "@/app/components/QuoteRequestForm";
 type Props = {
   params: Promise<{
     slug: string;
@@ -141,15 +142,40 @@ const container =
 <div
   style={{
     marginTop: "20px",
-    display: "inline-block",
-    background: "#22c55e",
-    color: "white",
-    padding: "10px 18px",
-    borderRadius: "20px",
-    fontWeight: "bold",
+    display: "flex",
+    gap: "10px",
+    alignItems: "center",
+    flexWrap: "wrap",
   }}
 >
-  ✅ Available for Delivery
+  <div
+    style={{
+      background:
+        slug === "40ft-high-cube-container"
+          ? "#f59e0b"
+          : "#16a34a",
+      color: "white",
+      padding: "10px 18px",
+      borderRadius: "20px",
+      fontWeight: "bold",
+    }}
+  >
+    {slug === "40ft-high-cube-container"
+      ? "⚠️ Limited Stock"
+      : "✅ In Stock"}
+  </div>
+
+  <div
+    style={{
+      background: "#22c55e",
+      color: "white",
+      padding: "10px 18px",
+      borderRadius: "20px",
+      fontWeight: "bold",
+    }}
+  >
+    🚚 Available for Delivery
+  </div>
 </div>
 
 <h2 style={{ marginTop: "40px" }}>Container Features</h2>
@@ -250,7 +276,9 @@ We provide fast and reliable container delivery across the United States and int
 >
   <h2>Request a Quote</h2>
 
-  <QuoteForm />
+  <QuoteRequestForm
+  containerType={slug.replace(/-/g, " ")}
+/>
 </div>
     </div>
   );

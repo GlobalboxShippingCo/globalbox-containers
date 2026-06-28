@@ -1,4 +1,6 @@
 import Image from "next/image";
+import TestimonialsSlider from "@/app/components/TestimonialsSlider";
+import FeaturedContainers from "@/app/components/FeaturedContainers";
 export default function Home() {
   return (
    <main style={{
@@ -187,302 +189,27 @@ export default function Home() {
   </p>
 </section>
 
-     {/* FEATURED CONTAINERS */}
+     <FeaturedContainers />
+
+      {/* TESTIMONIALS */}
 <section
   style={{
     padding: "60px 20px",
-    maxWidth: "1100px",
+    maxWidth: "900px",
     margin: "0 auto",
   }}
 >
   <h2
     style={{
       fontSize: "32px",
+      textAlign: "center",
       marginBottom: "30px",
-      textAlign: "center",
     }}
   >
-    Featured Containers
+    Customer Feedback
   </h2>
 
-  <div
-    style={{
-      display: "grid",
-      gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
-      gap: "20px",
-    }}
-  >
-   {/* 20ft Container */}
-<div className="service-card">
-
-  <div
-    style={{
-      background: "#ef4444",
-      color: "white",
-      padding: "6px 12px",
-      borderRadius: "20px",
-      display: "inline-block",
-      fontSize: "12px",
-      fontWeight: "bold",
-      marginBottom: "15px",
-    }}
-  >
-    NEW
-  </div>
-
-  <Image
-    src="/images/container1.jpg"
-    alt="20ft Standard Container"
-    width={400}
-    height={250}
-    style={{
-      width: "100%",
-      height: "220px",
-      objectFit: "cover",
-      borderRadius: "10px",
-    }}
-  />
-
-  <h3 style={{ marginTop: "15px" }}>
-    20ft Standard Container
-  </h3>
-
-  <p>Strong and secure for storage and transport.</p>
-
-  <h4>$2,500</h4>
-
- <a
-  href="https://wa.me/18606897427?text=Hello,%20I'm%20interested%20in%20the%2020ft%20Standard%20Container."
-  target="_blank"
-  className="whatsapp-button"
-  style={{
-    marginTop: "15px",
-    width: "100%",
-    textAlign: "center",
-  }}
->
-  Get Quote on WhatsApp
-</a>
-
- <a
-  href="/containers/20ft-standard-container"
-  className="outline-button"
-  style={{
-    marginTop: "10px",
-  }}
->
-  View Details
-</a>
-
-</div>
-
-    {/* 40ft Container */}
-<div className="service-card">
-  
-  <div
-    style={{
-      background: "#ef4444",
-      color: "white",
-      padding: "6px 12px",
-      borderRadius: "20px",
-      display: "inline-block",
-      fontSize: "12px",
-      fontWeight: "bold",
-      marginBottom: "15px",
-    }}
-  >
-    NEW
-  </div>
-
-  <Image
-    src="/images/container2.jpg"
-    alt="40ft Standard Container"
-    width={400}
-    height={250}
-    style={{
-      width: "100%",
-      height: "220px",
-      objectFit: "cover",
-      borderRadius: "10px",
-    }}
-  />
-
-  <h3 style={{ marginTop: "15px" }}>
-    40ft Standard Container
-  </h3>
-
-  <p>Ideal for commercial and industrial use.</p>
-
-  <h4>$4,000</h4>
-
-  <a
-  href="https://wa.me/18606897427?text=Hello,%20I'm%20interested%20in%20the%2040ft%20Standard%20Container."
-  target="_blank"
-  className="whatsapp-button"
-  style={{
-    marginTop: "15px",
-    width: "100%",
-    textAlign: "center",
-  }}
->
-  Get Quote on WhatsApp
-</a>
-
- <a
-  href="/containers/40ft-standard-container"
-  className="outline-button"
-  style={{
-    marginTop: "10px",
-  }}
->
-  View Details
-</a>
-</div>
-
-    {/* High Cube Container */}
-<div className="service-card">
-
-  <div
-    style={{
-      background: "#ef4444",
-      color: "white",
-      padding: "6px 12px",
-      borderRadius: "20px",
-      display: "inline-block",
-      fontSize: "12px",
-      fontWeight: "bold",
-      marginBottom: "15px",
-    }}
-  >
-    NEW
-  </div>
-
-  <Image
-    src="/images/container3.jpg"
-    alt="40ft High Cube Container"
-    width={400}
-    height={250}
-    style={{
-      width: "100%",
-      height: "220px",
-      objectFit: "cover",
-      borderRadius: "10px",
-    }}
-  />
-
-  <h3 style={{ marginTop: "15px" }}>
-    40ft High Cube Container
-  </h3>
-
-  <p>Extra height and larger storage capacity.</p>
-
-  <h4>$4,800</h4>
-
-  <a
-  href="https://wa.me/18606897427?text=Hello,%20I'm%20interested%20in%20the%2040ft%20High%20Cube%20Container."
-  target="_blank"
-  className="whatsapp-button"
-  style={{
-    marginTop: "15px",
-    width: "100%",
-    textAlign: "center",
-  }}
->
-  Get Quote on WhatsApp
-</a>
-
-<a
-  href="/containers/40ft-high-cube-container"
-  className="outline-button"
-  style={{
-    marginTop: "10px",
-  }}
->
-  View Details
-</a>
-</div>
-</div>
-</section>
-
-      {/* TESTIMONIALS */}
-<section
-  style={{
-    padding: "60px 20px",
-    maxWidth: "1000px",
-    margin: "0 auto"
-  }}
->
-  <h2
-    style={{
-      fontSize: "32px",
-      textAlign: "center",
-      marginBottom: "30px"
-    }}
-  >
-   Customers Feedback
-  </h2>
-
-  <div
-    style={{
-      display: "grid",
-      gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
-      gap: "20px"
-    }}
-  >
-   <div className="service-card">
-  <div
-    style={{
-      fontSize: "24px",
-      color: "#fbbf24",
-      marginBottom: "12px",
-    }}
-  >
-    ⭐⭐⭐⭐⭐
-  </div>
-
-  <p>
-    “Excellent service! Our container arrived on time and in excellent condition. Highly recommended.”
-  </p>
-
-  <h4>- Michael T., Orlando, FL</h4>
-</div>
-
-    <div className="service-card">
-  <div
-    style={{
-      fontSize: "24px",
-      color: "#fbbf24",
-      marginBottom: "12px",
-    }}
-  >
-    ⭐⭐⭐⭐⭐
-  </div>
-
-  <p>
-   “The team was professional from start to finish. The ordering process was easy, and delivery was exactly when promised.”
-  </p>
-
-  <h4>- Sarah L., Jacksonville, FL</h4>
-</div>
-
-    <div className="service-card">
-  <div
-    style={{
-      fontSize: "24px",
-      color: "#fbbf24",
-      marginBottom: "12px",
-    }}
-  >
-    ⭐⭐⭐⭐⭐
-  </div>
-
-  <p>
-   “The team was professional from start to finish. The ordering process was easy, and delivery was exactly when promised.”
-  </p>
-
-  <h4>- Sarah L., Jacksonville, FL</h4>
-</div>
-  </div>
+  <TestimonialsSlider />
 </section>
 
       {/* FAQ SECTION */}

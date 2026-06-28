@@ -5,22 +5,38 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: Request) {
   try {
-    const { name, email, message } = await request.json();
+    const {
+      name,
+      email,
+      phone,
+      location,
+      containerType,
+      quantity,
+      notes,
+    } = await request.json();
 
     const { error } = await resend.emails.send({
       from: "GlobalBox Containers <onboarding@resend.dev>",
       to: ["conglobalshippingcompanies@gmail.com"],
-      subject: `New Container Quote Request from ${name}`,
+      subject: `New Quote Request - ${containerType}`,
       html: `
-        <h2>New Quote Request</h2>
+        <h2>New Container Quote Request</h2>
 
         <p><strong>Name:</strong> ${name}</p>
 
         <p><strong>Email:</strong> ${email}</p>
 
-        <p><strong>Message:</strong></p>
+        <p><strong>Phone:</strong> ${phone}</p>
 
-        <p>${message}</p>
+        <p><strong>Delivery Location:</strong> ${location}</p>
+
+        <p><strong>Container Type:</strong> ${containerType}</p>
+
+        <p><strong>Quantity:</strong> ${quantity}</p>
+
+        <p><strong>Additional Notes:</strong></p>
+
+        <p>${notes || "None"}</p>
       `,
     });
 
@@ -28,9 +44,7 @@ export async function POST(request: Request) {
       console.error(error);
 
       return NextResponse.json(
-        {
-          error: error.message,
-        },
+        { error: error.message },
         { status: 500 }
       );
     }
