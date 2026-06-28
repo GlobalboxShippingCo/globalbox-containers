@@ -45,20 +45,16 @@ export default function GalleryPage() {
           <p>Starting from $2,500</p>
 
           <a
-            href="/containers/20ft-standard-container"
-            style={{
-              display: "block",
-              marginTop: "15px",
-              padding: "12px",
-              background: "#0f172a",
-              color: "white",
-              textAlign: "center",
-              textDecoration: "none",
-              borderRadius: "8px",
-            }}
-          >
-            View Details
-          </a>
+  href="/containers/20ft-standard-container"
+  className="primary-button"
+  style={{
+    display: "block",
+    marginTop: "15px",
+    textAlign: "center",
+  }}
+>
+  View Details
+</a>
         </div>
 
         {/* 40ft Container */}
@@ -80,20 +76,16 @@ export default function GalleryPage() {
           <p>Starting from $4,000</p>
 
           <a
-            href="/containers/40ft-standard-container"
-            style={{
-              display: "block",
-              marginTop: "15px",
-              padding: "12px",
-              background: "#0f172a",
-              color: "white",
-              textAlign: "center",
-              textDecoration: "none",
-              borderRadius: "8px",
-            }}
-          >
-            View Details
-          </a>
+       href="/containers/40ft-standard-container"
+       className="primary-button"
+       style={{
+       display: "block",
+       marginTop: "15px",
+       textAlign: "center",
+  }}
+>
+        View Details
+        </a>
         </div>
 
         {/* High Cube Container */}
@@ -115,20 +107,16 @@ export default function GalleryPage() {
           <p>Starting from $4,800</p>
 
           <a
-            href="/containers/40ft-high-cube-container"
-            style={{
-              display: "block",
-              marginTop: "15px",
-              padding: "12px",
-              background: "#0f172a",
-              color: "white",
-              textAlign: "center",
-              textDecoration: "none",
-              borderRadius: "8px",
-            }}
-          >
-            View Details
-          </a>
+  href="/containers/40ft-high-cube-container"
+  className="primary-button"
+  style={{
+    display: "block",
+    marginTop: "15px",
+    textAlign: "center",
+  }}
+>
+  View Details
+</a>
         </div>
 
         {/* Reefer Container */}
@@ -150,20 +138,16 @@ export default function GalleryPage() {
   <p>Starting from $5,500</p>
 
   <a
-    href="/containers/reefer-container"
-    style={{
-      display: "block",
-      marginTop: "15px",
-      padding: "12px",
-      background: "#0f172a",
-      color: "white",
-      textAlign: "center",
-      textDecoration: "none",
-      borderRadius: "8px",
-    }}
-  >
-    View Details
-  </a>
+  href="/containers/reefer-container"
+  className="primary-button"
+  style={{
+    display: "block",
+    marginTop: "15px",
+    textAlign: "center",
+  }}
+>
+  View Details
+</a>
 </div>
       </div>
     </div>

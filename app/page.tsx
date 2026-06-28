@@ -59,18 +59,12 @@ export default function Home() {
   Buy New & Used Containers at Competitive Prices Worldwide.
 </p>
 
-   <a
+  <a
   href="https://wa.me/18606897427"
   target="_blank"
+  className="whatsapp-button"
   style={{
     marginTop: "25px",
-    padding: "14px 28px",
-    background: "#25D366",
-    color: "white",
-    textDecoration: "none",
-    borderRadius: "8px",
-    display: "inline-block",
-    fontWeight: "bold",
   }}
 >
   Chat on WhatsApp
@@ -257,38 +251,24 @@ export default function Home() {
 
   <h4>$2,500</h4>
 
-  <a
-    href="https://wa.me/18606897427?text=Hello,%20I'm%20interested%20in%20the%2020ft%20Standard%20Container."
-    target="_blank"
-    style={{
-      display: "inline-block",
-      marginTop: "15px",
-      padding: "12px 20px",
-      background: "#25D366",
-      color: "white",
-      textDecoration: "none",
-      borderRadius: "8px",
-      fontWeight: "bold",
-      width: "100%",
-      textAlign: "center",
-    }}
-  >
-    Get Quote on WhatsApp
-  </a>
-
-  <a
-  href="/containers/20ft-standard-container"
+ <a
+  href="https://wa.me/18606897427?text=Hello,%20I'm%20interested%20in%20the%2020ft%20Standard%20Container."
+  target="_blank"
+  className="whatsapp-button"
   style={{
-    display: "block",
-    marginTop: "10px",
-    padding: "12px 20px",
-    border: "1px solid #0f172a",
-    background: "white",
-    borderRadius: "8px",
+    marginTop: "15px",
+    width: "100%",
     textAlign: "center",
-    textDecoration: "none",
-    color: "#0f172a",
-    fontWeight: "bold",
+  }}
+>
+  Get Quote on WhatsApp
+</a>
+
+ <a
+  href="/containers/20ft-standard-container"
+  className="outline-button"
+  style={{
+    marginTop: "10px",
   }}
 >
   View Details
@@ -336,34 +316,23 @@ export default function Home() {
   <h4>$4,000</h4>
 
   <a
-    href="https://wa.me/18606897427?text=Hello,%20I'm%20interested%20in%20the%2040ft%20Standard%20Container."
-    target="_blank"
-    style={{
-      display: "inline-block",
-      marginTop: "15px",
-      padding: "12px 20px",
-      background: "#25D366",
-      color: "white",
-      textDecoration: "none",
-      borderRadius: "8px",
-      fontWeight: "bold",
-    }}
-  >
-    Get Quote on WhatsApp
-  </a>
-  <a
-  href="/containers/40ft-standard-container"
+  href="https://wa.me/18606897427?text=Hello,%20I'm%20interested%20in%20the%2040ft%20Standard%20Container."
+  target="_blank"
+  className="whatsapp-button"
   style={{
-    display: "block",
-    marginTop: "10px",
-    padding: "12px 20px",
-    border: "1px solid #0f172a",
-    background: "white",
-    borderRadius: "8px",
+    marginTop: "15px",
+    width: "100%",
     textAlign: "center",
-    textDecoration: "none",
-    color: "#0f172a",
-    fontWeight: "bold",
+  }}
+>
+  Get Quote on WhatsApp
+</a>
+
+ <a
+  href="/containers/40ft-standard-container"
+  className="outline-button"
+  style={{
+    marginTop: "10px",
   }}
 >
   View Details
@@ -410,35 +379,23 @@ export default function Home() {
   <h4>$4,800</h4>
 
   <a
-    href="https://wa.me/18606897427?text=Hello,%20I'm%20interested%20in%20the%2040ft%20High%20Cube%20Container."
-    target="_blank"
-    style={{
-      display: "inline-block",
-      marginTop: "15px",
-      padding: "12px 20px",
-      background: "#25D366",
-      color: "white",
-      textDecoration: "none",
-      borderRadius: "8px",
-      fontWeight: "bold",
-    }}
-  >
-    Get Quote on WhatsApp
-  </a>
+  href="https://wa.me/18606897427?text=Hello,%20I'm%20interested%20in%20the%2040ft%20High%20Cube%20Container."
+  target="_blank"
+  className="whatsapp-button"
+  style={{
+    marginTop: "15px",
+    width: "100%",
+    textAlign: "center",
+  }}
+>
+  Get Quote on WhatsApp
+</a>
 
 <a
   href="/containers/40ft-high-cube-container"
+  className="outline-button"
   style={{
-    display: "block",
     marginTop: "10px",
-    padding: "12px 20px",
-    border: "1px solid #0f172a",
-    background: "white",
-    borderRadius: "8px",
-    textAlign: "center",
-    textDecoration: "none",
-    color: "#0f172a",
-    fontWeight: "bold",
   }}
 >
   View Details

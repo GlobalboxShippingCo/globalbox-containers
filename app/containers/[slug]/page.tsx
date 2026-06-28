@@ -174,32 +174,22 @@ We provide fast and reliable container delivery across the United States and int
 </p>
 
       <a
-        href="https://wa.me/18606897427"
-        target="_blank"
-        style={{
-          display: "inline-block",
-          marginTop: "30px",
-          padding: "15px 25px",
-          background: "#25D366",
-          color: "white",
-          textDecoration: "none",
-          borderRadius: "8px",
-          fontWeight: "bold",
-        }}
-      >
-        Get Quote on WhatsApp
-      </a>
+  href="https://wa.me/18606897427"
+  target="_blank"
+  className="primary-button"
+  style={{
+    marginTop: "30px",
+    background: "#25D366",
+  }}
+>
+  Get Quote on WhatsApp
+</a>
+
       <a
   href="/"
+  className="primary-button"
   style={{
-    display: "inline-block",
     marginLeft: "15px",
-    padding: "15px 25px",
-    background: "#0f172a",
-    color: "white",
-    textDecoration: "none",
-    borderRadius: "8px",
-    fontWeight: "bold",
   }}
 >
   Back to Home

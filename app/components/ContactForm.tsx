@@ -112,21 +112,15 @@ ${message}`;
       />
 
       <button
-        type="submit"
-        disabled={loading}
-        style={{
-          marginTop: "20px",
-          padding: "15px 25px",
-          background: "#0f172a",
-          color: "white",
-          border: "none",
-          borderRadius: "8px",
-          fontWeight: "bold",
-          cursor: "pointer",
-        }}
-      >
-        {loading ? "Sending..." : "Send Message"}
-      </button>
+  type="submit"
+  disabled={loading}
+  className="primary-button"
+  style={{
+    marginTop: "20px",
+  }}
+>
+  {loading ? "Sending..." : "Send Message"}
+</button>
     </form>
   );
 }
