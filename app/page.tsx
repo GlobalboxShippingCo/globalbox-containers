@@ -3,6 +3,7 @@ import TestimonialsSlider from "@/app/components/TestimonialsSlider";
 import FeaturedContainers from "@/app/components/FeaturedContainers";
 import RecentSales from "@/app/components/RecentSales";
 import CartCounter from "@/app/components/CartCounter";
+import Navbar from "@/app/components/Navbar";
 export default function Home() {
   return (
    <main style={{
@@ -14,48 +15,7 @@ export default function Home() {
 }}>
 
        {/* NAV BAR */}
-    <nav style={{
-  display: "flex",
-  justifyContent: "space-between",
-  padding: "20px",
-  flexWrap: "wrap",
-  gap: "10px",
-  background: "white",
-  position: "sticky",
-  top: "0",
-  zIndex: 1000,
-  borderBottom: "1px solid #eee"
-}}>
- <Image
-  src="/images/logo.png"
-  alt="Globalbox Containers"
-  width={300}
-  height={100}
-  style={{
-    height: "75px",
-    width: "auto",
-  }}
-/>
- <div
-  style={{
-    display: "flex",
-    gap: "20px",
-    flexWrap: "wrap",
-    alignItems: "center",
-  }}
->
-  <a href="/">Home</a>
-  <a href="/gallery">Gallery</a>
-
-  <a href="/favorites">❤️ Favorites</a>
-
-  <CartCounter />
-
-  <a href="/about">About</a>
-  <a href="/services">Services</a>
-  <a href="/contact">Contact</a>
-</div>
-</nav>
+    <Navbar />
 
       {/* HERO */}
      <section style={{
