@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useWishlist } from "@/app/context/WishlistContext";
 import toast from "react-hot-toast";
 type ProductCardProps = {
   name: string;
@@ -17,6 +18,8 @@ export default function ProductCard({
   link,
   stock,
 }: ProductCardProps) {
+
+    const { addToWishlist } = useWishlist();
   const addToCart = () => {
     const cart = JSON.parse(localStorage.getItem("cart") || "[]");
 
@@ -49,23 +52,31 @@ export default function ProductCard({
         position: "relative",
       }}
     >
-      <button
-        style={{
-          position: "absolute",
-          top: "15px",
-          right: "15px",
-          width: "42px",
-          height: "42px",
-          borderRadius: "50%",
-          border: "none",
-          background: "white",
-          cursor: "pointer",
-          fontSize: "20px",
-          boxShadow: "0 5px 15px rgba(0,0,0,.15)",
-        }}
-      >
-        ❤️
-      </button>
+     <button
+  onClick={() => {
+    addToWishlist({
+      containerType: link,
+      price,
+    });
+
+    toast.success(`${name} added to wishlist ❤️`);
+  }}
+  style={{
+    position: "absolute",
+    top: "15px",
+    right: "15px",
+    width: "42px",
+    height: "42px",
+    borderRadius: "50%",
+    border: "none",
+    background: "white",
+    cursor: "pointer",
+    fontSize: "20px",
+    boxShadow: "0 5px 15px rgba(0,0,0,.15)",
+  }}
+>
+  ❤️
+</button>
 
       <img
         src={image}

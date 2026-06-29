@@ -111,35 +111,93 @@ const container =
     background: "#f8fafc",
   }}
 >
-  <h3>Specifications</h3>
 
-  {slug === "20ft-standard-container" && (
-    <>
-      <p><strong>External Length:</strong> 20ft</p>
-      <p><strong>External Width:</strong> 8ft</p>
-      <p><strong>External Height:</strong> 8.6ft</p>
-    </>
-  )}
+  <h3
+  style={{
+    marginBottom: "20px",
+  }}
+>
+  Specifications
+</h3>
 
-  {slug === "40ft-standard-container" && (
-    <>
-      <p><strong>External Length:</strong> 40ft</p>
-      <p><strong>External Width:</strong> 8ft</p>
-      <p><strong>External Height:</strong> 8.6ft</p>
-    </>
-  )}
+<table
+  style={{
+    width: "100%",
+    borderCollapse: "collapse",
+  }}
+>
+  <tbody>
+    <tr>
+      <td style={{ padding: "12px", fontWeight: "bold" }}>
+        External Length
+      </td>
+      <td style={{ padding: "12px" }}>
+        {slug === "20ft-standard-container"
+          ? "20ft"
+          : "40ft"}
+      </td>
+    </tr>
 
-  {slug === "40ft-high-cube-container" && (
-    <>
-      <p><strong>External Length:</strong> 40ft</p>
-      <p><strong>External Width:</strong> 8ft</p>
-      <p><strong>External Height:</strong> 9.6ft</p>
-    </>
-  )}
+    <tr
+      style={{
+        background: "#f8fafc",
+      }}
+    >
+      <td style={{ padding: "12px", fontWeight: "bold" }}>
+        External Width
+      </td>
+      <td style={{ padding: "12px" }}>
+        8ft
+      </td>
+    </tr>
 
-  <p><strong>Material:</strong> Corten Steel</p>
-  <p><strong>Condition:</strong> New / Cargo Worthy</p>
-  <p><strong>Weatherproof:</strong> Yes</p>
+    <tr>
+      <td style={{ padding: "12px", fontWeight: "bold" }}>
+        External Height
+      </td>
+      <td style={{ padding: "12px" }}>
+        {slug === "40ft-high-cube-container"
+          ? "9.6ft"
+          : "8.6ft"}
+      </td>
+    </tr>
+
+    <tr
+      style={{
+        background: "#f8fafc",
+      }}
+    >
+      <td style={{ padding: "12px", fontWeight: "bold" }}>
+        Material
+      </td>
+      <td style={{ padding: "12px" }}>
+        Corten Steel
+      </td>
+    </tr>
+
+    <tr>
+      <td style={{ padding: "12px", fontWeight: "bold" }}>
+        Condition
+      </td>
+      <td style={{ padding: "12px" }}>
+        Cargo Worthy
+      </td>
+    </tr>
+
+    <tr
+      style={{
+        background: "#f8fafc",
+      }}
+    >
+      <td style={{ padding: "12px", fontWeight: "bold" }}>
+        Weatherproof
+      </td>
+      <td style={{ padding: "12px" }}>
+        Yes
+      </td>
+    </tr>
+  </tbody>
+</table>
 </div>
 
 <div
@@ -293,6 +351,82 @@ We provide fast and reliable container delivery across the United States and int
       <h3>40ft High Cube Container</h3>
       <p>Starting from $4,800</p>
     </a>
+  </div>
+</div>
+
+<div
+  style={{
+    marginTop: "60px",
+  }}
+>
+  <h2
+    style={{
+      marginBottom: "25px",
+    }}
+  >
+    ⭐ Customer Reviews
+  </h2>
+
+  <div
+    style={{
+      display: "grid",
+      gridTemplateColumns: "repeat(auto-fit,minmax(280px,1fr))",
+      gap: "20px",
+    }}
+  >
+    <div className="service-card">
+      <div style={{ color: "#f59e0b", fontSize: "20px" }}>
+        ⭐⭐⭐⭐⭐
+      </div>
+
+      <p
+        style={{
+          marginTop: "15px",
+          lineHeight: "1.8",
+        }}
+      >
+        The container arrived exactly as described. Excellent
+        condition and very fast delivery.
+      </p>
+
+      <strong>- Michael T.</strong>
+    </div>
+
+    <div className="service-card">
+      <div style={{ color: "#f59e0b", fontSize: "20px" }}>
+        ⭐⭐⭐⭐⭐
+      </div>
+
+      <p
+        style={{
+          marginTop: "15px",
+          lineHeight: "1.8",
+        }}
+      >
+        Great communication throughout the purchase.
+        Highly recommended.
+      </p>
+
+      <strong>- Sarah K.</strong>
+    </div>
+
+    <div className="service-card">
+      <div style={{ color: "#f59e0b", fontSize: "20px" }}>
+        ⭐⭐⭐⭐⭐
+      </div>
+
+      <p
+        style={{
+          marginTop: "15px",
+          lineHeight: "1.8",
+        }}
+      >
+        Professional service, quality container and smooth
+        delivery process.
+      </p>
+
+      <strong>- David R.</strong>
+    </div>
   </div>
 </div>
 
