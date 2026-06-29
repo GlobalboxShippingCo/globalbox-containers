@@ -2,6 +2,9 @@ import Image from "next/image";
 import QuoteForm from "@/app/components/QuoteForm";
 import ContainerGallery from "@/app/components/ContainerGallery";
 import QuoteRequestForm from "@/app/components/QuoteRequestForm";
+import ShareButton from "@/app/components/ShareButton";
+import WishlistButton from "@/app/components/WishlistButton";
+import AddToCartButton from "@/app/components/AddToCartButton";
 type Props = {
   params: Promise<{
     slug: string;
@@ -211,15 +214,43 @@ We provide fast and reliable container delivery across the United States and int
   Get Quote on WhatsApp
 </a>
 
-      <a
-  href="/"
-  className="primary-button"
+<div
   style={{
-    marginLeft: "15px",
+    display: "flex",
+    gap: "15px",
+    flexWrap: "wrap",
+    marginTop: "25px",
+    marginBottom: "30px",
+    alignItems: "center",
   }}
 >
-  Back to Home
-</a>
+  <div
+  style={{
+    display: "flex",
+    gap: "15px",
+    flexWrap: "wrap",
+    marginTop: "25px",
+    marginBottom: "30px",
+    alignItems: "center",
+  }}
+>
+  <ShareButton />
+
+  <WishlistButton containerType={slug} />
+
+  <AddToCartButton
+    containerType={slug}
+    price={container.price}
+  />
+
+  <a
+    href="/"
+    className="primary-button"
+  >
+    ⬅ Back to Home
+  </a>
+</div>
+</div>
 
 <div
   style={{

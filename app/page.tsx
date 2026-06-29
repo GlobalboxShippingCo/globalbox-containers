@@ -1,6 +1,8 @@
 import Image from "next/image";
 import TestimonialsSlider from "@/app/components/TestimonialsSlider";
 import FeaturedContainers from "@/app/components/FeaturedContainers";
+import RecentSales from "@/app/components/RecentSales";
+import CartCounter from "@/app/components/CartCounter";
 export default function Home() {
   return (
    <main style={{
@@ -34,13 +36,25 @@ export default function Home() {
     width: "auto",
   }}
 />
-  <div style={{ display: "flex", gap: "20px" }}>
-    <a href="/">Home</a>
-    <a href="/gallery">Gallery</a>
-    <a href="/about">About</a>
-    <a href="/services">Services</a>
-    <a href="/contact">Contact</a>
-  </div>
+ <div
+  style={{
+    display: "flex",
+    gap: "20px",
+    flexWrap: "wrap",
+    alignItems: "center",
+  }}
+>
+  <a href="/">Home</a>
+  <a href="/gallery">Gallery</a>
+
+  <a href="/favorites">❤️ Favorites</a>
+
+  <CartCounter />
+
+  <a href="/about">About</a>
+  <a href="/services">Services</a>
+  <a href="/contact">Contact</a>
+</div>
 </nav>
 
       {/* HERO */}
@@ -188,6 +202,8 @@ export default function Home() {
     durable, secure, and affordable containers with excellent customer service.
   </p>
 </section>
+
+<RecentSales />
 
      <FeaturedContainers />
 
