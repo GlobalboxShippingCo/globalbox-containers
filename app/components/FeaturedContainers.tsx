@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import ProductCard from "./ProductCard";
 
 export default function FeaturedContainers() {
   const [search, setSearch] = useState("");
@@ -36,95 +37,65 @@ export default function FeaturedContainers() {
   return (
     <section
       style={{
-        padding: "60px 20px",
-        maxWidth: "1100px",
+        padding: "70px 20px",
+        maxWidth: "1200px",
         margin: "0 auto",
       }}
     >
       <h2
         style={{
-          fontSize: "32px",
+          fontSize: "40px",
           textAlign: "center",
-          marginBottom: "20px",
+          marginBottom: "15px",
         }}
       >
         Featured Containers
       </h2>
 
+      <p
+        style={{
+          textAlign: "center",
+          color: "#6b7280",
+          marginBottom: "40px",
+          fontSize: "18px",
+        }}
+      >
+        Browse our most popular shipping containers.
+      </p>
+
       <input
         type="text"
-        placeholder="Search containers..."
+        placeholder="🔍 Search containers..."
         value={search}
         onChange={(e) => setSearch(e.target.value)}
         style={{
           width: "100%",
           maxWidth: "600px",
           display: "block",
-          margin: "0 auto 40px",
+          margin: "0 auto 45px",
           padding: "16px",
           border: "1px solid #ddd",
-          borderRadius: "10px",
-          fontSize: "18px",
+          borderRadius: "12px",
+          fontSize: "17px",
         }}
       />
 
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "repeat(auto-fit,minmax(250px,1fr))",
-          gap: "20px",
+          gridTemplateColumns: "repeat(auto-fit, minmax(300px,1fr))",
+          gap: "30px",
         }}
       >
         {filteredContainers.map((container) => (
-          <div key={container.name} className="service-card">
-            <img
-              src={container.image}
-              alt={container.name}
-              style={{
-                width: "100%",
-                height: "220px",
-                objectFit: "cover",
-                borderRadius: "10px",
-              }}
-            />
-
-            <h3 style={{ marginTop: "15px" }}>
-              {container.name}
-            </h3>
-
-            <h4>{container.price}</h4>
-
-            <div
-              style={{
-                display: "inline-block",
-                background:
-                  container.stock === "Limited Stock"
-                    ? "#f59e0b"
-                    : "#16a34a",
-                color: "white",
-                padding: "6px 12px",
-                borderRadius: "20px",
-                marginBottom: "15px",
-                fontSize: "13px",
-                fontWeight: "bold",
-              }}
-            >
-              {container.stock === "Limited Stock"
-                ? "⚠️ Limited Stock"
-                : "✅ In Stock"}
-            </div>
-
-            <a
-              href={container.link}
-              className="primary-button"
-              style={{
-                display: "block",
-                textAlign: "center",
-              }}
-            >
-              View Details
-            </a>
-          </div>
+          <ProductCard
+            key={container.name}
+            name={container.name}
+            price={container.price}
+            image={container.image}
+            link={container.link}
+            stock={container.stock}
+          />
         ))}
       </div>
 

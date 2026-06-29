@@ -1,8 +1,12 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+
+import DesktopNav from "./DesktopNav";
+import MobileNav from "./MobileNav";
+import MobileMenu from "./MobileMenu";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -17,17 +21,19 @@ export default function Navbar() {
 
     window.addEventListener("resize", checkScreen);
 
-    return () => window.removeEventListener("resize", checkScreen);
+    return () =>
+      window.removeEventListener("resize", checkScreen);
   }, []);
 
   return (
     <nav
       style={{
-        background: "white",
-        borderBottom: "1px solid #eee",
+        background: "#fff",
+        borderBottom: "1px solid #e5e7eb",
         position: "sticky",
         top: 0,
         zIndex: 1000,
+        boxShadow: "0 2px 10px rgba(0,0,0,.05)",
       }}
     >
       <div
@@ -37,71 +43,35 @@ export default function Navbar() {
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
-          padding: "15px 20px",
+          padding: "16px 20px",
         }}
       >
         <Link href="/">
           <Image
             src="/images/logo.png"
-            alt="Globalbox"
+            alt="Globalbox Containers"
             width={220}
             height={70}
             style={{
               width: "170px",
               height: "auto",
+              cursor: "pointer",
             }}
           />
         </Link>
 
         {isMobile ? (
-          <button
-            onClick={() => setMenuOpen(!menuOpen)}
-            style={{
-              fontSize: "30px",
-              background: "none",
-              border: "none",
-              cursor: "pointer",
-            }}
-          >
-            ☰
-          </button>
+          <MobileNav
+            menuOpen={menuOpen}
+            setMenuOpen={setMenuOpen}
+          />
         ) : (
-          <div
-            style={{
-              display: "flex",
-              gap: "25px",
-              alignItems: "center",
-              fontWeight: "bold",
-            }}
-          >
-            <Link href="/">Home</Link>
-            <Link href="/gallery">Gallery</Link>
-            <Link href="/about">About</Link>
-            <Link href="/services">Services</Link>
-            <Link href="/contact">Contact</Link>
-            <Link href="/cart">🛒 Cart</Link>
-          </div>
+          <DesktopNav />
         )}
       </div>
 
       {isMobile && menuOpen && (
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            padding: "20px",
-            gap: "15px",
-            background: "white",
-            borderTop: "1px solid #eee",
-          }}
-        >
-          <Link href="/">Home</Link>
-          <Link href="/gallery">Gallery</Link>
-          <Link href="/about">About</Link>
-          <Link href="/services">Services</Link>
-          <Link href="/contact">Contact</Link>
-          <Link href="/cart">🛒 Cart</Link>
-        </div>
+        <MobileMenu setMenuOpen={setMenuOpen} />
       )}
     </nav>
   );

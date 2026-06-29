@@ -18,33 +18,165 @@ export default function Home() {
     <Navbar />
 
       {/* HERO */}
-     <section style={{
-  color: "white",
-  padding: "220px 20px",
-  textAlign: "center",
-  backgroundImage: "linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/images/hero-container.jpg')",
-  backgroundSize: "cover",
-  backgroundPosition: "top center",
-  backgroundRepeat: "no-repeat",
-}}>
-  <h1 style={{ fontSize: "64px", fontWeight: "bold", marginBottom: "20px" }}>
-  Premium Shipping Containers Across the World
-</h1>
-
-<p style={{ fontSize: "24px", color: "#ddd", maxWidth: "700px", margin: "0 auto" }}>
-  Buy New & Used Containers at Competitive Prices Worldwide.
-</p>
-
-  <a
-  href="https://wa.me/18606897427"
-  target="_blank"
-  className="whatsapp-button"
+<section
   style={{
-    marginTop: "25px",
+    position: "relative",
+    minHeight: "90vh",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    textAlign: "center",
+    padding: "40px 20px",
+    color: "white",
+    backgroundImage:
+      "linear-gradient(rgba(5,23,42,0.72), rgba(5,23,42,0.72)), url('/images/hero-container.jpg')",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
   }}
 >
-  Chat on WhatsApp
-</a>
+  <div
+    style={{
+      maxWidth: "900px",
+      width: "100%",
+    }}
+  >
+    <p
+      style={{
+        color: "#38bdf8",
+        letterSpacing: "3px",
+        fontWeight: "bold",
+        textTransform: "uppercase",
+        marginBottom: "18px",
+        fontSize: "18px",
+      }}
+    >
+      Global Shipping Container Solutions
+    </p>
+
+    <h1
+      style={{
+        fontSize: "clamp(40px, 7vw, 72px)",
+        fontWeight: 800,
+        lineHeight: 1.1,
+        marginBottom: "25px",
+      }}
+    >
+      Premium Shipping Containers
+      <br />
+      Delivered Worldwide
+    </h1>
+
+    <p
+      style={{
+        fontSize: "clamp(18px, 2vw, 24px)",
+        color: "#e5e7eb",
+        maxWidth: "720px",
+        margin: "0 auto 40px",
+        lineHeight: 1.7,
+      }}
+    >
+      Buy premium new and used shipping containers for storage,
+      logistics, commercial projects, and custom modifications.
+      Fast worldwide delivery with trusted customer service.
+    </p>
+
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        gap: "18px",
+        flexWrap: "wrap",
+      }}
+    >
+      <a
+        href="https://wa.me/18606897427"
+        target="_blank"
+        className="whatsapp-button"
+      >
+        💬 Get Free Quote
+      </a>
+
+      <a
+        href="/gallery"
+        className="outline-button"
+      >
+        📦 Browse Containers
+      </a>
+    </div>
+  </div>
+</section>
+
+{/* COMPANY STATS */}
+
+<section
+  style={{
+    background: "#ffffff",
+    padding: "70px 20px",
+  }}
+>
+  <div
+    style={{
+      maxWidth: "1200px",
+      margin: "0 auto",
+      display: "grid",
+      gridTemplateColumns: "repeat(auto-fit, minmax(220px,1fr))",
+      gap: "30px",
+      textAlign: "center",
+    }}
+  >
+    <div className="service-card">
+      <h2
+        style={{
+          fontSize: "42px",
+          color: "#0f172a",
+        }}
+      >
+        5,000+
+      </h2>
+
+      <p>Containers Delivered</p>
+    </div>
+
+    <div className="service-card">
+      <h2
+        style={{
+          fontSize: "42px",
+          color: "#0f172a",
+        }}
+      >
+        25+
+      </h2>
+
+      <p>Countries Served</p>
+    </div>
+
+    <div className="service-card">
+      <h2
+        style={{
+          fontSize: "42px",
+          color: "#0f172a",
+        }}
+      >
+        98%
+      </h2>
+
+      <p>Customer Satisfaction</p>
+    </div>
+
+    <div className="service-card">
+      <h2
+        style={{
+          fontSize: "42px",
+          color: "#0f172a",
+        }}
+      >
+        24/7
+      </h2>
+
+      <p>Customer Support</p>
+    </div>
+  </div>
 </section>
 
 {/* TRUST SECTION */}
